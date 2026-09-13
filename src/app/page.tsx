@@ -1,5 +1,6 @@
 import { HeroSection } from '@/components/home/HeroSection';
 import { TransformationsGrid } from '@/components/home/TransformationsGrid';
+import { TargetAudienceSection } from '@/components/home/TargetAudienceSection';
 import { TestimonialCard } from '@/components/home/TestimonialCard';
 import { SlideUp } from '@/components/motion/SlideUp';
 import { HeroCanvas } from '@/components/webgl/HeroCanvas';
@@ -36,10 +37,13 @@ export default function HomePage() {
             </div>
           </section>
 
+          {/* Para Quién Es Section */}
+          <TargetAudienceSection />
+
           {/* Testimonials Section */}
           <section className="py-20 sm:py-32 border-t border-neutral/30">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <SlideUp className="text-center mb-16">
+              <SlideUp className="text-center mb-2 sm:mb-12">
                 <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
                   Reseñas
                 </p>

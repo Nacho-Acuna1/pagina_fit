@@ -29,10 +29,13 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
+import { SplashScreen } from "@/components/ui/SplashScreen";
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-dvh flex flex-col bg-dark text-text">
+    <html lang="es" className={`${inter.variable} h-full antialiased overflow-x-hidden`}>
+      <body className="min-h-dvh flex flex-col bg-dark text-text overflow-x-hidden relative w-full">
+        <SplashScreen />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -14,13 +14,13 @@ export default function SobreMiPage() {
         title={TRAINER.name}
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold uppercase mb-6 text-white tracking-tight">
             {TRAINER.title}
           </h2>
-          <p className="text-lg sm:text-xl text-white/90 leading-relaxed mb-6 font-medium">
+          <p className="text-lg sm:text-xl text-white/90 leading-relaxed mb-6 font-light">
             {TRAINER.aboutIntro}
           </p>
-          <p className="text-base sm:text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-white/70 leading-relaxed max-w-2xl mx-auto font-light">
             {TRAINER.aboutPhilosophy}
           </p>
         </div>
@@ -58,20 +58,19 @@ export default function SobreMiPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SlideUp className="text-center max-w-3xl mx-auto">
             <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
-              Mi Filosofía
+              Mi Historia de Vida
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               No se trata solo de <span className="text-primary">entrenar</span>
             </h2>
             <p className="text-text-muted leading-relaxed mb-4">
-              Creo firmemente que el cambio físico es solo la punta del iceberg. 
-              Mi enfoque integra disciplina, mentalidad, nutrición y descanso para 
-              crear una transformación que perdure en el tiempo.
+              Desde los 15, transformé por completo mi físico y mi forma de entender el entrenamiento.
+              Pasé de ser un chico que simplemente quería cambiar su cuerpo a descubrir una pasión que terminaría convirtiéndose en mi profesión.
+              Durante estos años entrené, experimenté, cometí errores y aprendí qué es lo que realmente funciona. Después de dedicarme a trabajos como cocinero, bachero, entre otros, entendí que quería dedicar mi vida a algo que realmente me apasionara.
+              Con esfuerzo y sacrificio, logré reunir el dinero necesario para capacitarme en Nutrición Deportiva y Entrenamiento Personal certificado.
             </p>
             <p className="text-text-muted leading-relaxed">
-              Cada persona es un mundo diferente, y por eso cada plan que diseño 
-              es único. No creo en las soluciones genéricas — creo en entender a 
-              cada alumno y crear un camino que funcione para su vida real.
+              Hoy, después de 6 años de entrenamiento, todo lo que aprendí a través de mi propia experiencia, mi formación y el trabajo con otras personas se convirtió en un método para ayudar a otros a transformar su físico. No se trata solamente de entrenar. Se trata de tener un plan, aprender a alimentarte y entender qué estás haciendo para conseguir resultados
             </p>
           </SlideUp>
         </div>

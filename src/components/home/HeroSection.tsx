@@ -83,15 +83,7 @@ export function HeroSection() {
         >
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-            Rutinas 100% Personalizadas
-          </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-            Asesoría Nutricional
-          </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-            Soporte Continuo
+            Lic. Nutrición Deportiva
           </div>
         </motion.div>
 
@@ -104,13 +96,13 @@ export function HeroSection() {
         >
           <Link
             href="/servicios"
-            className="w-full sm:w-auto inline-flex items-center justify-center min-h-12 px-8 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-all active:scale-95"
+            className="w-[85%] sm:w-auto inline-flex items-center justify-center min-h-12 px-8 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-all active:scale-95"
           >
             Empieza Tu Transformación
           </Link>
           <Link
             href="/sobre-mi"
-            className="w-full sm:w-auto inline-flex items-center justify-center min-h-12 px-8 border border-neutral hover:border-primary text-text-muted hover:text-primary font-semibold rounded-lg transition-all active:scale-95 backdrop-blur-sm"
+            className="w-[85%] sm:w-auto inline-flex items-center justify-center min-h-12 px-8 border border-neutral hover:border-primary text-text-muted hover:text-primary font-semibold rounded-lg transition-all active:scale-95 backdrop-blur-sm"
           >
             Conoce al Entrenador
           </Link>
