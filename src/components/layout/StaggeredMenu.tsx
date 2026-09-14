@@ -101,15 +101,16 @@ export function StaggeredMenu() {
               })}
             </div>
 
-            {/* Pie del menú / Preparación para WhatsApp */}
+            {/* Pie del menú / CTA Principal */}
             <motion.div variants={itemVariants} className="pt-4 border-t border-white/10 flex flex-col gap-4 text-center">
               <p className="text-white/50 text-xs font-semibold tracking-widest uppercase">¿Listo para empezar?</p>
-              <button 
+              <Link 
+                href="/servicios"
                 onClick={() => setIsOpen(false)} 
-                className="w-full bg-primary/20 text-primary py-4 rounded-xl font-bold text-lg hover:bg-primary hover:text-white transition-all border border-primary/30 hover:shadow-[0_0_20px_rgba(220,38,38,0.4)]"
+                className="flex items-center justify-center w-full bg-primary/20 text-primary py-4 rounded-xl font-bold text-lg hover:bg-primary hover:text-white transition-all border border-primary/30 hover:shadow-[0_0_20px_rgba(220,38,38,0.4)]"
               >
-                Contactar por WhatsApp
-              </button>
+                Ver planes
+              </Link>
             </motion.div>
           </motion.div>
         )}

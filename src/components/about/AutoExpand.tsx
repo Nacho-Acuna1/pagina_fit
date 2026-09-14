@@ -112,11 +112,11 @@ export function AutoExpand({
       {title && (
         <motion.div
           initial={{ opacity: 1, y: 0, scale: 1 }}
-          animate={{ opacity: 0, y: -40, scale: 1.05 }}
+          animate={{ opacity: 0, y: -40, scale: 1 }}
           transition={{ duration: duration * 0.7, ease: 'easeInOut', delay: 0.1 }}
           className="absolute inset-0 flex items-center justify-center pointer-events-none"
         >
-          <h1 className="text-4xl sm:text-6xl font-bold text-white tracking-tight drop-shadow-2xl text-center px-4">
+          <h1 className="text-4xl sm:text-6xl font-bold uppercase text-white tracking-tight drop-shadow-2xl text-center px-4">
             {title}
           </h1>
         </motion.div>

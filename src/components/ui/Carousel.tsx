@@ -43,14 +43,14 @@ export function Carousel({ children, autoPlayInterval = 6000 }: CarouselProps) {
 
   return (
     <div 
-      className="relative w-full py-8 sm:py-12 overflow-hidden"
+      className="relative w-full py-2 sm:py-12 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered(true)}
       onTouchEnd={() => setIsHovered(false)}
     >
       {/* Contenedor central (Slider) */}
-      <div className="relative h-[480px] sm:h-[450px] w-full max-w-7xl mx-auto flex items-center justify-center">
+      <div className="relative h-[380px] sm:h-[450px] w-full max-w-7xl mx-auto flex items-center justify-center">
         <AnimatePresence initial={false}>
           {items.map((child, i) => {
             const relativePos = getRelativePosition(i);
