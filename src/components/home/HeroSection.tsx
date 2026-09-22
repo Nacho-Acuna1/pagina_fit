@@ -4,6 +4,8 @@ import { motion } from 'motion/react';
 import Link from 'next/link';
 import { TRAINER } from '@/lib/constants';
 
+import { TypewriterText } from '@/components/ui/TypewriterText';
+
 export function HeroSection() {
   return (
     <section className="relative min-h-dvh flex items-center justify-center overflow-hidden">
@@ -45,31 +47,20 @@ export function HeroSection() {
         </motion.div>
 
         {/* Título Principal */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-5xl sm:text-6xl lg:text-8xl font-bold leading-[1.1] mb-6 drop-shadow-2xl tracking-tight"
-        >
-          {TRAINER.heroTagline.split(' ').map((word, i) => (
-            <span key={i}>
-              {word.toLowerCase() === 'transformación' ||
-              word.toLowerCase() === 'límites' ||
-              word.toLowerCase() === 'versión' ? (
-                <span className="text-primary">{word}</span>
-              ) : (
-                word
-              )}{' '}
-            </span>
-          ))}
-        </motion.h1>
+        <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold leading-[1.1] mb-4 drop-shadow-2xl tracking-tight w-[95%] sm:max-w-4xl mx-auto">
+          <TypewriterText 
+            text={TRAINER.heroTagline} 
+            delay={0.8}
+            highlightWords={['voluntad', 'camino']}
+          />
+        </h1>
 
         {/* Subtítulo / Descripción */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-text-muted text-lg sm:text-xl lg:text-2xl max-w-3xl mx-auto mb-8 font-medium leading-relaxed"
+          className="text-text-muted text-sm sm:text-lg lg:text-2xl max-w-[90%] sm:max-w-2xl mx-auto mb-8 font-medium leading-relaxed"
         >
           {TRAINER.heroSubtitle}
         </motion.p>

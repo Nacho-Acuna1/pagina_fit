@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'motion/react';
-import Link from 'next/link';
-import type { PricingPlan } from '@/lib/constants';
+import { PricingPlan, SITE_CONFIG } from '@/lib/constants';
+import { CheckoutButton } from './CheckoutButton';
 
 interface PricingCardProps {
   plan: PricingPlan;
@@ -75,16 +75,13 @@ export function PricingCard({ plan, index }: PricingCardProps) {
       </ul>
 
       {/* CTA */}
-      <Link
-        href="#contacto"
-        className={`inline-flex items-center justify-center min-h-12 w-full rounded-lg font-bold transition-all active:scale-95 ${
-          plan.highlighted
-            ? 'bg-white hover:bg-gray-200 text-dark shadow-[0_0_20px_rgba(255,255,255,0.4)]'
-            : 'bg-neutral/40 hover:bg-neutral/60 text-text'
-        }`}
-      >
-        Elegir Plan
-      </Link>
+      <CheckoutButton 
+        productId={plan.id} 
+        label="Elegir Plan"
+        className={plan.highlighted
+          ? 'bg-white hover:bg-gray-200 text-dark shadow-[0_0_20px_rgba(255,255,255,0.4)]'
+          : 'bg-neutral/40 hover:bg-neutral/60 text-text'}
+      />
     </motion.div>
   );
 }

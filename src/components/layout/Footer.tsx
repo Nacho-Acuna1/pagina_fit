@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { SITE_CONFIG } from '@/lib/constants';
 
 const TikTokIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -57,23 +58,19 @@ export function Footer() {
 
           {/* Social Links */}
           <div className="flex items-center gap-8">
-            {/* PEGA EL LINK DE TU INSTAGRAM AQUÍ: cambia href="#" por href="https://instagram.com/tu-perfil" */}
-            <a href="https://www.instagram.com/angel_galc?stkn=MXR3OHpsa2h1Z2Z4YQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors hover:scale-110 transform" aria-label="Instagram">
+            <a href={SITE_CONFIG.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors hover:scale-110 transform" aria-label="Instagram">
               <InstagramIcon />
             </a>
 
-            {/* PEGA EL LINK DE TU TIKTOK AQUÍ */}
-            <a href="https://www.tiktok.com/@angel_galc?_r=1&_t=ZS-99gX5e3ASvt" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors hover:scale-110 transform" aria-label="TikTok">
+            <a href={SITE_CONFIG.socials.tiktok} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors hover:scale-110 transform" aria-label="TikTok">
               <TikTokIcon />
             </a>
 
-            {/* PEGA EL LINK DE TU YOUTUBE AQUÍ */}
-            <a href="https://youtube.com/@angel_galc?si=Pzk9a3QTfI4UvLdw" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors hover:scale-110 transform" aria-label="YouTube">
+            <a href={SITE_CONFIG.socials.youtube} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors hover:scale-110 transform" aria-label="YouTube">
               <YouTubeIcon />
             </a>
 
-            {/* PEGA TU CORREO AQUÍ: cambia "tu-correo@ejemplo.com" por tu correo real */}
-            <a href="mailto:4ngelgal@gmail.com" className="text-white/60 hover:text-white transition-colors hover:scale-110 transform" aria-label="Email">
+            <a href={`mailto:${SITE_CONFIG.contact.email}`} className="text-white/60 hover:text-white transition-colors hover:scale-110 transform" aria-label="Email">
               <EmailIcon />
             </a>
           </div>

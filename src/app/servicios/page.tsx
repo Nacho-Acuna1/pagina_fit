@@ -1,9 +1,9 @@
 import { SlideUp } from '@/components/motion/SlideUp';
 import { PricingCard } from '@/components/services/PricingCard';
-import { PRICING_PLANS } from '@/lib/constants';
+import { PRICING_PLANS, SITE_CONFIG } from '@/lib/constants';
 import MaskedHeading from '@/components/ui/MaskedHeading';
-import Link from 'next/link';
-import { ContactModal } from '@/components/services/ContactModal';
+import { ContactForm } from '@/components/services/ContactForm';
+import { CheckoutButton } from '@/components/services/CheckoutButton';
 
 export default function ServiciosPage() {
   const mainPlans = PRICING_PLANS.slice(0, 2);
@@ -89,7 +89,9 @@ export default function ServiciosPage() {
                 <p className="text-text-muted text-lg mb-8 leading-relaxed max-w-md mx-auto md:mx-0">
                   {customPlan.description}
                 </p>
-                <ContactModal />
+                <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                  <CheckoutButton productId="digital" label="Comprar Ahora" className="bg-primary hover:bg-primary-dark shadow-[0_0_20px_rgba(220,38,38,0.3)]" />
+                </div>
               </div>
 
               {/* Right Column (Features) */}
@@ -111,6 +113,13 @@ export default function ServiciosPage() {
 
             </div>
           </SlideUp>
+        </div>
+      </section>
+
+      {/* Formulario de Consultas General */}
+      <section className="py-20 bg-dark-card border-t border-neutral/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ContactForm />
         </div>
       </section>
     </div>

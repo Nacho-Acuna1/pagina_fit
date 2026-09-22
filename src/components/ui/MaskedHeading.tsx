@@ -8,7 +8,7 @@ const clamp = (v: number, a: number, b: number) => (v < a ? a : v > b ? b : v);
 
 export interface MaskedHeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   text?: string;
-  tag?: any;
+  tag?: React.ElementType;
   mediaType?: 'image' | 'video';
   src?: string;
   poster?: string;
@@ -272,7 +272,7 @@ const MaskedHeading = ({
     };
   }, [reveal, trigger, duration, stagger, words]);
 
-  const Tag = tag as any;
+  const Tag = tag as React.ElementType;
 
   return (
     <Tag
@@ -330,7 +330,10 @@ const MaskedHeading = ({
             {mediaType === 'video' ? (
               <video className="masked-heading__source" src={src} poster={poster} autoPlay muted loop playsInline />
             ) : (
-              <img className="masked-heading__source" src={src} alt="" draggable={false} />
+              <>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="masked-heading__source" src={src} alt="" draggable={false} />
+              </>
             )}
           </span>
         </span>

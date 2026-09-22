@@ -19,11 +19,17 @@ export function HeroCanvas() {
       const { Renderer, Camera, Transform, Geometry, Program, Mesh } = await import('ogl');
       if (cancelled || !container) return;
 
-      const renderer = new Renderer({
-        dpr: Math.min(window.devicePixelRatio, 2),
-        alpha: true,
-        antialias: true,
-      });
+      let renderer: any;
+      try {
+        renderer = new Renderer({
+          dpr: Math.min(window.devicePixelRatio, 2),
+          alpha: true,
+          antialias: true,
+        });
+      } catch (e) {
+        console.warn('WebGL is not supported on this device. Fallback background will be used.');
+        return;
+      }
       const gl = renderer.gl;
       glRef = gl;
       gl.clearColor(0, 0, 0, 0);

@@ -4,9 +4,8 @@ import { TargetAudienceSection } from '@/components/home/TargetAudienceSection';
 import { TestimonialCard } from '@/components/home/TestimonialCard';
 import { SlideUp } from '@/components/motion/SlideUp';
 import { HeroCanvas } from '@/components/webgl/HeroCanvas';
-import { TESTIMONIALS } from '@/lib/constants';
+import { TESTIMONIALS, SITE_CONFIG } from '@/lib/constants';
 import { Carousel } from '@/components/ui/Carousel';
-import Link from 'next/link';
 
 export default function HomePage() {
   return (
@@ -62,12 +61,14 @@ export default function HomePage() {
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 text-center max-w-xl backdrop-blur-md">
                   <h3 className="text-xl font-bold mb-2">¿Eres alumno actual?</h3>
                   <p className="text-white/60 mb-6 text-sm">Tu testimonio es mi mayor motivación y ayuda a que más personas decidan cambiar su vida.</p>
-                  <Link 
-                    href="#" 
+                  <a 
+                    href={SITE_CONFIG.links.reviewsForm} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-block bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-primary-dark transition-colors shadow-[0_0_15px_rgba(220,38,38,0.3)] hover:scale-105"
                   >
                     Dejar mi Reseña
-                  </Link>
+                  </a>
                 </div>
               </SlideUp>
             </div>

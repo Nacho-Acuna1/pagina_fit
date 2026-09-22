@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { NAV_LINKS } from '@/lib/constants';
 
@@ -75,7 +76,13 @@ export function StaggeredMenu() {
           >
             {/* Logo en Grande dentro del menú */}
             <motion.div variants={itemVariants} className="flex justify-center pb-6 border-b border-white/10">
-              <img src="/images/logo.png" alt="Logo FT Nutrition" className="h-28 sm:h-36 w-auto object-contain drop-shadow-2xl opacity-90" />
+              <Image 
+                src="/images/logo.png" 
+                alt="Logo FT Nutrition" 
+                width={200}
+                height={144}
+                className="h-28 sm:h-36 w-auto object-contain drop-shadow-2xl opacity-90" 
+              />
             </motion.div>
 
             {/* Enlaces de navegación */}

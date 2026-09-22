@@ -1,4 +1,5 @@
 import { FadeIn } from '@/components/motion/FadeIn';
+import Image from 'next/image';
 import type { Testimonial } from '@/lib/constants';
 
 interface TestimonialCardProps {
@@ -40,9 +41,11 @@ export function TestimonialCard({ testimonial, index }: TestimonialCardProps) {
         <div className="mt-5 flex items-center gap-3">
           {/* Avatar */}
           {testimonial.avatar ? (
-            <img 
+            <Image 
               src={testimonial.avatar} 
               alt={`Avatar de ${testimonial.name}`} 
+              width={40}
+              height={40}
               className="w-10 h-10 rounded-full object-cover shrink-0" 
             />
           ) : (

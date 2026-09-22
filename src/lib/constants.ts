@@ -34,6 +34,7 @@ export interface TimelineEvent {
   year: string;
   title: string;
   description: string;
+  diplomaImage?: string;
 }
 
 export interface Stat {
@@ -65,7 +66,7 @@ export const TRANSFORMATIONS: Transformation[] = [
     description:
       'Perdió 18 kg de grasa corporal y aumentó notablemente su masa muscular siguiendo un plan de fuerza estructurado y déficit calórico flexible.',
     imageBefore: '/images/transformations/before-1.jpg',
-    imageAfter: '/images/transformations/after-1.jpg',
+    imageAfter: '/images/transformations/after-1.JPG',
   },
   {
     name: 'Veronica',
@@ -87,15 +88,15 @@ export const TRANSFORMATIONS: Transformation[] = [
     name: 'Alexis',
     duration: '4 meses',
     description:
-      'Logró recomposición corporal, aumentando su fuerza en todos los ejercicios compuestos y perdiendo 5 kg de grasa, sin dejar de disfrutar sus comidas favoritas.',
-    imageBefore: '/images/transformations/before-4.JPG',
-    imageAfter: '/images/transformations/after-4.JPEG',
+      'Logró una recomposición corporal, perdiendo grasa y ganando masa muscular mientras trabajaba largas jornadas como camarero en Estados Unidos. Ya había trabajado con otros entrenadores, pero nunca había encontrado un proceso en el que se sintiera realmente cómodo y acompañado. Adaptamos el entrenamiento y la alimentación a su vida real, incluso aprovechando las comidas que tenía disponibles en su propio trabajo, sin exigirle tener horas libres ni dejar de disfrutar lo que le gusta. Primero realizamos una etapa de definición y luego un volumen controlado para construir músculo manteniendo el resultado. No necesitó más tiempo.Necesitó un plan que pudiera sostener.',
+    imageBefore: '/images/transformations/before-4.jpg',
+    imageAfter: '/images/transformations/after-4.jpeg',
   },
   {
     name: 'Lucas',
     duration: '2 meses',
     description:
-      'Transformación total de estilo de vida. Ganó 10 kg de masa muscular magra y cambió radicalmente su mentalidad hacia el entrenamiento a largo plazo.',
+      'Lucas empezó siendo muy delgado y con dificultades para ganar peso. Arrancamos desde casa, con unas simples mancuernas y barras En los primeros meses ganó 5 kg muy bien distribuidos con un trabajo espectacula Después pasamos al gimnasio y el cambio fue todavía mayor Y lo mejor: no tuvo que vivir a dieta Seguimos teniendo días libres, salidas y comidas que disfrutaba.Simplemente aprendió a usar la alimentación a su favor Hoy está mejor que nunca, y disfrutando cada entrenamiento mejorando sus cargas.',
     imageBefore: '/images/transformations/before-5.PNG',
     imageAfter: '/images/transformations/after-5.PNG',
   },
@@ -186,28 +187,31 @@ export const PRICING_PLANS: PricingPlan[] = [
 export const TIMELINE_EVENTS: TimelineEvent[] = [
   {
     year: '2019',
-    title: 'Grado en Ciencias de la Actividad Física y del Deporte',
-    description: 'Graduación con mención especial en biomecánica aplicada y entrenamiento de fuerza para la salud.',
+    title: 'Comienzo del entrenamiento',
+    description: 'Empecé a entrenar y a descubrir una pasión que terminaría convirtiéndose en mi profesión.',
   },
   {
-    year: '2021',
-    title: 'Certificación Internacional NSCA-CPT',
-    description: 'Acreditación por la National Strength and Conditioning Association como Entrenador Personal Certificado.',
+    year: '2025',
+    title: 'Certificación en Nutrición Deportiva',
+    description: 'Formación profesional enfocada en manipulación de macronutrientes, déficit estratégico y alimentación para rendimiento.',
+    diplomaImage: '/images/diploma1.jpg',
   },
   {
-    year: '2024',
-    title: 'Especialización en Nutrición Deportiva y Composición Corporal',
-    description: 'Formación de postgrado enfocada en manipulación de macronutrientes, déficit estratégico e hipertrofia.',
+    year: '2025',
+    title: 'Certificación en Desarrollo de la Hipertrofia',
+    description: 'Especialización en metodologías de entrenamiento para el desarrollo muscular óptimo.',
+    diplomaImage: '/images/diploma3.jpg',
+  },
+  {
+    year: '2025',
+    title: 'Certificación en Anatomía y Fisiología del Ejercicio',
+    description: 'Formación en el funcionamiento del cuerpo humano aplicado al entrenamiento y la prevención de lesiones.',
+    diplomaImage: '/images/diploma2.jpg',
   },
   {
     year: '2025',
     title: 'Lanzamiento de Plataforma de Asesoramiento Online',
-    description: 'Creación de un sistema integral de entrenamiento y nutrición que ha guiado a más de 200 clientes a sus metas.',
-  },
-  {
-    year: '2025',
-    title: 'Certificación Avanzada en Movilidad y Prevención de Lesiones',
-    description: 'Especialización en optimización de patrones de movimiento articular y readaptación funcional.',
+    description: 'Creación de un sistema integral de entrenamiento y nutrición que ha guiado a más de 100 clientes a sus metas.',
   },
 ];
 
@@ -221,7 +225,7 @@ export const STATS: Stat[] = [
 export const TRAINER: Trainer = {
   name: 'Angel Castillo',
   title: 'Entrenador Personal Certificado',
-  heroTagline: 'Tu me traes la voluntad, yo te traigo el camino.',
+  heroTagline: 'Me traes la voluntad, yo te traigo el camino.',
   heroSubtitle: 'Mi objetivo no es simplemente darte un atajo para cambiar tu físico. Quiero enseñarte a entender tu entrenamiento y tu alimentación para que puedas mantener ese cambio durante toda tu vida',
   aboutIntro: 'Mi objetivo no es simplemente darte un atajo para cambiar tu físico. Quiero enseñarte a entender tu entrenamiento y tu alimentación para que puedas mantener ese cambio durante toda tu vida',
   aboutPhilosophy: 'Mi filosofía se basa en la consistencia por encima de la perfección. Entrenar de forma inteligente con una técnica impecable y una nutrición flexible es el único camino hacia una transformación que dura para siempre.',
@@ -247,3 +251,19 @@ export const TARGET_AUDIENCE: TargetAudience[] = [
     description: 'Cualquiera que esté estancado en sus progresos o cansado de hacer entrenamientos al azar y sin una dirección clara.'
   }
 ];
+
+export const SITE_CONFIG = {
+  contact: {
+    whatsappNumber: '5492604829264', // Reemplazar por tu número real internacional (sin el +)
+    email: 'adrielacu2705@gmail.com',     // Correo público y donde te llegarán las consultas del formulario
+  },
+  socials: {
+    instagram: 'https://www.instagram.com/angel_galc?stkn=MXR3OHpsa2h1Z2Z4YQ%3D%3D&utm_source=qr',
+    tiktok: 'https://www.tiktok.com/@angel_galc?_r=1&_t=ZS-99gX5e3ASvt',
+    youtube: 'https://youtube.com/@angel_galc?si=Pzk9a3QTfI4UvLdw',
+  },
+  links: {
+    reviewsForm: 'https://docs.google.com/forms/d/e/TU_FORMULARIO/viewform', // Reemplazar por link de Google Forms
+    paymentProduct: '#', // TODO: Reemplazar por tu link de MercadoPago o Stripe
+  }
+};
